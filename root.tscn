@@ -6,7 +6,9 @@
 [node name="Root" type="Node2D" unique_id=2002437452]
 
 [node name="Level" parent="." unique_id=972982531 instance=ExtResource("1_pyidc")]
+position = Vector2(581, 326)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=235987464]
+position = Vector2(581, 326)
 
 [node name="Crosshair" parent="." unique_id=1168615329 instance=ExtResource("4_28aoi")]
