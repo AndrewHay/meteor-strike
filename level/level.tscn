@@ -1,33 +1,31 @@
 [gd_scene format=3 uid="uid://q7o6ygniny5a"]
 
-[ext_resource type="PackedScene" uid="uid://dmm3jw2q47u2m" path="res://meteor/meteor.tscn" id="1_qohg2"]
+[ext_resource type="Script" uid="uid://d320oj6nwyvko" path="res://level/level.gd" id="1_ktfr2"]
 [ext_resource type="Texture2D" uid="uid://cyh6vowjriiba" path="res://assets/bg_1_1.png" id="1_vkbyq"]
 [ext_resource type="PackedScene" uid="uid://cbcdxli8t5l72" path="res://house/house.tscn" id="2_vkbyq"]
 [ext_resource type="PackedScene" uid="uid://cnavm0immy15t" path="res://static_box.tscn" id="3_ktfr2"]
 
 [node name="Level" type="Node2D" unique_id=972982531]
+script = ExtResource("1_ktfr2")
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=189541379]
 scroll_scale = Vector2(0.1, 0.1)
+scroll_offset = Vector2(0, 96)
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=65056790]
-position = Vector2(-2.4999695, -8)
-scale = Vector2(1.4662502, 1.1033332)
+position = Vector2(2.0000305, -4.0000305)
+scale = Vector2(2.7425, 2.3466668)
 texture = ExtResource("1_vkbyq")
 
-[node name="Meteor" parent="." unique_id=1745156751 instance=ExtResource("1_qohg2")]
-position = Vector2(248, -238)
-linear_velocity = Vector2(-120, -60)
-
 [node name="House" parent="." unique_id=1658777344 instance=ExtResource("2_vkbyq")]
-position = Vector2(0, 117)
+position = Vector2(0, 496)
 
 [node name="House2" parent="." unique_id=823515509 instance=ExtResource("2_vkbyq")]
-position = Vector2(120, 117)
+position = Vector2(120, 496)
 
 [node name="House3" parent="." unique_id=774974785 instance=ExtResource("2_vkbyq")]
-position = Vector2(-126, 117)
+position = Vector2(-126, 496)
 
 [node name="StaticBody2D2" parent="." unique_id=1474745948 instance=ExtResource("3_ktfr2")]
-position = Vector2(-1.1920929e-07, 238)
-scale = Vector2(18.160004, 2.7600012)
+position = Vector2(-17, 612)
+scale = Vector2(33.626194, 2.5699892)
