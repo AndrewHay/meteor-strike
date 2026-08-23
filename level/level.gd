@@ -5,12 +5,31 @@ const METEOR_SPEED := 150.0
 
 var meteor_scene = preload("res://meteor/meteor.tscn")
 
+@onready var background: Sprite2D = $Parallax2D/Sprite2D
+@onready var parallax: Parallax2D = $Parallax2D
+
 func _ready() -> void:
+	get_viewport().size_changed.connect(_center_background)
+	_center_background()
+
 	var timer = Timer.new()
 	timer.wait_time = 1.0
 	timer.autostart = true
 	timer.timeout.connect(_spawn_meteor)
 	add_child(timer)
+
+func _center_background() -> void:
+	var camera = get_viewport().get_camera_2d()
+	if camera == null or background.texture == null:
+		return
+
+	var viewport_size = get_viewport().get_visible_rect().size
+	var visible_size = viewport_size / camera.zoom
+	var texture_size = background.texture.get_size()
+	var scale_factor = maxf(visible_size.x / texture_size.x, visible_size.y / texture_size.y)
+
+	background.scale = Vector2(scale_factor, scale_factor)
+	background.position = parallax.to_local(camera.get_screen_center_position())
 
 func _spawn_meteor() -> void:
 	var houses = get_tree().get_nodes_in_group("house")
