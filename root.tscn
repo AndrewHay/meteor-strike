@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b27qhu1jpmdvj"]
 
 [ext_resource type="PackedScene" uid="uid://q7o6ygniny5a" path="res://level/level.tscn" id="1_pyidc"]
+[ext_resource type="PackedScene" uid="uid://3ic1cyif1etj" path="res://turret/turret.tscn" id="3_vvh5c"]
 [ext_resource type="PackedScene" uid="uid://brckowiu61j6c" path="res://crosshair/crosshair.tscn" id="4_28aoi"]
 
 [node name="Root" type="Node2D" unique_id=2002437452]
@@ -14,3 +15,9 @@ scale = Vector2(-13.48471, 7.4695535)
 zoom = Vector2(0.55, 0.55)
 
 [node name="Crosshair" parent="." unique_id=1168615329 instance=ExtResource("4_28aoi")]
+
+[node name="Turret" parent="." unique_id=412231546 instance=ExtResource("3_vvh5c")]
+position = Vector2(138, 414)
+
+[node name="Turret2" parent="." unique_id=1777625790 instance=ExtResource("3_vvh5c")]
+position = Vector2(1056, 415)

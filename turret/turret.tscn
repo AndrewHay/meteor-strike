@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://3ic1cyif1etj"]
+
+[ext_resource type="Texture2D" uid="uid://dkxx7r3fgjla0" path="res://turret/turret.png" id="1_vfthy"]
+[ext_resource type="Script" uid="uid://cl3tyggod43rd" path="res://turret/turret.gd" id="2_1p48p"]
+[ext_resource type="Texture2D" uid="uid://bqw7sox4lbttb" path="res://turret/turret_barrel.png" id="2_2876l"]
+
+[node name="Turret" type="Sprite2D" unique_id=412231546 node_paths=PackedStringArray("barrel")]
+texture = ExtResource("1_vfthy")
+script = ExtResource("2_1p48p")
+barrel = NodePath("Barrel")
+
+[node name="Barrel" type="Sprite2D" parent="." unique_id=9886340]
+texture = ExtResource("2_2876l")
