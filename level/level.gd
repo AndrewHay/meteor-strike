@@ -18,10 +18,10 @@ func _spawn_meteor() -> void:
 		return
 
 	var meteor = meteor_scene.instantiate()
+	add_child(meteor)
 	meteor.position = _random_right_position()
 	var target = bases.pick_random()
-	meteor.linear_velocity = (target.position - meteor.position).normalized() * METEOR_SPEED
-	add_child(meteor)
+	meteor.linear_velocity = (target.global_position - meteor.global_position).normalized() * METEOR_SPEED
 
 func _random_right_position() -> Vector2:
 	var viewport = get_viewport()

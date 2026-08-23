@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c8n4ship2k7m1p"]
+
+[ext_resource type="Script" uid="uid://mjvrdcyodfbo" path="res://ship/ship.gd" id="1_ship"]
+[ext_resource type="PackedScene" uid="uid://v2r2xuyshift" path="res://reactor/reactor.tscn" id="2_reactor"]
+[ext_resource type="PackedScene" uid="uid://3ic1cyif1etj" path="res://turret/turret.tscn" id="3_turret"]
+
+[node name="Ship" type="Node2D"]
+script = ExtResource("1_ship")
+
+[node name="Reactor" parent="." instance=ExtResource("2_reactor")]
+gravity_scale = 0.0
+
+[node name="Turret" parent="." instance=ExtResource("3_turret")]
+position = Vector2(125, 0)
+rotation = 1.5707964

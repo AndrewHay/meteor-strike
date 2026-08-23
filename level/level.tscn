@@ -2,8 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d320oj6nwyvko" path="res://level/level.gd" id="1_ktfr2"]
 [ext_resource type="Texture2D" uid="uid://cyh6vowjriiba" path="res://assets/bg_1_1.png" id="1_vkbyq"]
-[ext_resource type="PackedScene" uid="uid://v2r2xuyshift" path="res://reactor/reactor.tscn" id="3_44x8d"]
-[ext_resource type="PackedScene" uid="uid://3ic1cyif1etj" path="res://turret/turret.tscn" id="5_ktfr2"]
+[ext_resource type="PackedScene" uid="uid://c8n4ship2k7m1p" path="res://ship/ship.tscn" id="2_ship"]
 
 [node name="Level" type="Node2D" unique_id=972982531]
 script = ExtResource("1_ktfr2")
@@ -21,10 +20,5 @@ scale = Vector2(4.4, 3.3)
 texture = ExtResource("1_vkbyq")
 centered = false
 
-[node name="Reactor" parent="." unique_id=1853265617 instance=ExtResource("3_44x8d")]
+[node name="Ship" parent="." instance=ExtResource("2_ship")]
 position = Vector2(-454, 0)
-gravity_scale = 0.0
-
-[node name="Turret" parent="." unique_id=412231546 instance=ExtResource("5_ktfr2")]
-position = Vector2(-329, 0)
-rotation = 1.5707964

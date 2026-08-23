@@ -11,6 +11,5 @@ func _on_body_entered(body: Node) -> void:
 		if body.is_in_group("bullet"):
 			body.queue_free()
 			queue_free()
-		if body.is_in_group("house"):
+		if body.is_in_group("base"):
 			body.queue_free()
-			print("house gone bye bye");
