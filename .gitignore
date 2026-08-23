@@ -21,3 +21,4 @@
 *.db
 .beads-credential-key
 .beads/proxieddb/
+.vscode/

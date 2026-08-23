@@ -1,6 +1,7 @@
 extends Node2D
 
 const SPAWN_ABOVE_MARGIN := 48.0
+const METEOR_SPEED := 150.0
 
 var meteor_scene = preload("res://meteor/meteor.tscn")
 
@@ -12,8 +13,14 @@ func _ready() -> void:
 	add_child(timer)
 
 func _spawn_meteor() -> void:
+	var houses = get_tree().get_nodes_in_group("house")
+	if houses.is_empty():
+		return
+
 	var meteor = meteor_scene.instantiate()
 	meteor.position = _random_top_position()
+	var target = houses.pick_random()
+	meteor.linear_velocity = (target.position - meteor.position).normalized() * METEOR_SPEED
 	add_child(meteor)
 
 func _random_top_position() -> Vector2:

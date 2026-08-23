@@ -10,7 +10,6 @@ script = ExtResource("1_ktfr2")
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=189541379]
 scroll_scale = Vector2(0.1, 0.1)
-scroll_offset = Vector2(0, 96)
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=65056790]
 position = Vector2(2.0000305, -4.0000305)
@@ -18,14 +17,14 @@ scale = Vector2(2.7425, 2.3466668)
 texture = ExtResource("1_vkbyq")
 
 [node name="House" parent="." unique_id=1658777344 instance=ExtResource("2_vkbyq")]
-position = Vector2(0, 496)
+position = Vector2(0, 433)
 
 [node name="House2" parent="." unique_id=823515509 instance=ExtResource("2_vkbyq")]
-position = Vector2(120, 496)
+position = Vector2(120, 433)
 
 [node name="House3" parent="." unique_id=774974785 instance=ExtResource("2_vkbyq")]
-position = Vector2(-126, 496)
+position = Vector2(-126, 433)
 
 [node name="StaticBody2D2" parent="." unique_id=1474745948 instance=ExtResource("3_ktfr2")]
-position = Vector2(-17, 612)
+position = Vector2(-17, 549)
 scale = Vector2(33.626194, 2.5699892)

@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://bbjda6kvl7k5c" path="res://meteor/meteor.gd" id="1_gt2qx"]
 
 [node name="Meteor" type="RigidBody2D" unique_id=1745156751]
+gravity_scale = 0.0
 contact_monitor = true
 max_contacts_reported = 10
 script = ExtResource("1_gt2qx")

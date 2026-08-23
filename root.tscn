@@ -7,17 +7,18 @@
 [node name="Root" type="Node2D" unique_id=2002437452]
 
 [node name="Level" parent="." unique_id=972982531 instance=ExtResource("1_pyidc")]
-position = Vector2(581, 326)
+position = Vector2(-5, 2)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=235987464]
-position = Vector2(562.99994, 400)
+position = Vector2(-9, -3.8146973e-06)
 scale = Vector2(-13.48471, 7.4695535)
 zoom = Vector2(0.55, 0.55)
 
 [node name="Crosshair" parent="." unique_id=1168615329 instance=ExtResource("4_28aoi")]
+position = Vector2(-1028, -644)
 
 [node name="Turret" parent="." unique_id=412231546 instance=ExtResource("3_vvh5c")]
-position = Vector2(138, 414)
+position = Vector2(-906, 422)
 
 [node name="Turret2" parent="." unique_id=1777625790 instance=ExtResource("3_vvh5c")]
-position = Vector2(1056, 415)
+position = Vector2(898, 417)
