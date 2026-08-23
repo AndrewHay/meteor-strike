@@ -2,9 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d320oj6nwyvko" path="res://level/level.gd" id="1_ktfr2"]
 [ext_resource type="Texture2D" uid="uid://cyh6vowjriiba" path="res://assets/bg_1_1.png" id="1_vkbyq"]
-[ext_resource type="PackedScene" uid="uid://cbcdxli8t5l72" path="res://house/house.tscn" id="2_vkbyq"]
 [ext_resource type="PackedScene" uid="uid://v2r2xuyshift" path="res://reactor/reactor.tscn" id="3_44x8d"]
-[ext_resource type="PackedScene" uid="uid://cnavm0immy15t" path="res://static_box.tscn" id="3_ktfr2"]
 [ext_resource type="PackedScene" uid="uid://3ic1cyif1etj" path="res://turret/turret.tscn" id="5_ktfr2"]
 
 [node name="Level" type="Node2D" unique_id=972982531]
@@ -12,25 +10,21 @@ script = ExtResource("1_ktfr2")
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=189541379]
 scroll_scale = Vector2(0, 0)
+scroll_offset = Vector2(0, 64)
+repeat_size = Vector2(1760, 0)
+autoscroll = Vector2(-80, 0)
+repeat_times = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=65056790]
+position = Vector2(-1760, -990)
+scale = Vector2(4.4, 3.3)
 texture = ExtResource("1_vkbyq")
+centered = false
 
 [node name="Reactor" parent="." unique_id=1853265617 instance=ExtResource("3_44x8d")]
-position = Vector2(0, 401)
-
-[node name="House2" parent="." unique_id=823515509 instance=ExtResource("2_vkbyq")]
-position = Vector2(120, 433)
-
-[node name="House3" parent="." unique_id=774974785 instance=ExtResource("2_vkbyq")]
-position = Vector2(-126, 433)
-
-[node name="StaticBody2D2" parent="." unique_id=1474745948 instance=ExtResource("3_ktfr2")]
-position = Vector2(-17, 549)
-scale = Vector2(33.626194, 2.5699892)
+position = Vector2(-454, 0)
+gravity_scale = 0.0
 
 [node name="Turret" parent="." unique_id=412231546 instance=ExtResource("5_ktfr2")]
-position = Vector2(276, 405)
-
-[node name="Turret2" parent="." unique_id=7108829 instance=ExtResource("5_ktfr2")]
-position = Vector2(-267, 405)
+position = Vector2(-329, 0)
+rotation = 1.5707964
