@@ -7,7 +7,7 @@ func _ready() -> void:
 func _on_body_entered(body: Node) -> void:
 	if body is RigidBody2D:
 		if body.is_in_group("bullet"):
-			print("metero gone bye bye")
+			print("meteor gone bye bye")
 			queue_free()
 		if body.is_in_group("house"):
 			body.queue_free()
