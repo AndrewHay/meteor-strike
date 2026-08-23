@@ -1,8 +1,12 @@
 [gd_scene format=3 uid="uid://dmm3jw2q47u2m"]
 
 [ext_resource type="Texture2D" uid="uid://dattm8aco6uj8" path="res://meteor/meteor.png" id="1_dyf3c"]
+[ext_resource type="Script" uid="uid://lga7jj7xc0a0" path="res://meteor/meteor.gd" id="1_gt2qx"]
 
 [node name="Meteor" type="RigidBody2D" unique_id=1745156751]
+contact_monitor = true
+max_contacts_reported = 10
+script = ExtResource("1_gt2qx")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1606481505]
 scale = Vector2(0.462923, 0.462923)
