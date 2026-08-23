@@ -6,6 +6,7 @@ const BULLET = preload("res://bullet/bullet.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _input(event: InputEvent) -> void:
+	if not Game.instance.playing: return
 	if event is InputEventMouseButton and event.is_pressed():
 		var b = BULLET.instantiate()
 		b.position = position

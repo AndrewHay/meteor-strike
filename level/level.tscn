@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://d320oj6nwyvko" path="res://level/level.gd" id="1_ktfr2"]
 [ext_resource type="Texture2D" uid="uid://cyh6vowjriiba" path="res://assets/bg_1_1.png" id="1_vkbyq"]
 [ext_resource type="PackedScene" uid="uid://cbcdxli8t5l72" path="res://house/house.tscn" id="2_vkbyq"]
+[ext_resource type="PackedScene" uid="uid://v2r2xuyshift" path="res://reactor/reactor.tscn" id="3_44x8d"]
 [ext_resource type="PackedScene" uid="uid://cnavm0immy15t" path="res://static_box.tscn" id="3_ktfr2"]
 [ext_resource type="PackedScene" uid="uid://3ic1cyif1etj" path="res://turret/turret.tscn" id="5_ktfr2"]
 
@@ -15,8 +16,8 @@ scroll_scale = Vector2(0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=65056790]
 texture = ExtResource("1_vkbyq")
 
-[node name="House" parent="." unique_id=1658777344 instance=ExtResource("2_vkbyq")]
-position = Vector2(0, 433)
+[node name="Reactor" parent="." unique_id=1853265617 instance=ExtResource("3_44x8d")]
+position = Vector2(0, 401)
 
 [node name="House2" parent="." unique_id=823515509 instance=ExtResource("2_vkbyq")]
 position = Vector2(120, 433)

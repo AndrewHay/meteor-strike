@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://v2r2xuyshift"]
+
+[ext_resource type="Script" uid="uid://k5godhgpqhas" path="res://reactor/reactor.gd" id="1_6e2y7"]
+[ext_resource type="Texture2D" uid="uid://bmcaly3g4yh5q" path="res://reactor/reactor.png" id="2_o6ihl"]
+
+[node name="Reactor" type="RigidBody2D" unique_id=1853265617]
+contact_monitor = true
+max_contacts_reported = 1
+script = ExtResource("1_6e2y7")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=807814666]
+texture = ExtResource("2_o6ihl")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=179736795]
+polygon = PackedVector2Array(-64, -64, -64, 64, 64, 64, 64, -64)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -3,9 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://q7o6ygniny5a" path="res://level/level.tscn" id="1_pyidc"]
 [ext_resource type="Script" uid="uid://dk10km1ofrgey" path="res://root.gd" id="1_vvh5c"]
 [ext_resource type="PackedScene" uid="uid://brckowiu61j6c" path="res://crosshair/crosshair.tscn" id="4_28aoi"]
+[ext_resource type="PackedScene" uid="uid://dh0jbh82iffw8" path="res://ui/ui.tscn" id="4_jnlp7"]
 
-[node name="Root" type="Node2D" unique_id=2002437452]
+[node name="Root" type="Node2D" unique_id=2002437452 node_paths=PackedStringArray("ui")]
 script = ExtResource("1_vvh5c")
+ui = NodePath("UI")
 
 [node name="Level" parent="." unique_id=972982531 instance=ExtResource("1_pyidc")]
 
@@ -13,3 +15,5 @@ script = ExtResource("1_vvh5c")
 zoom = Vector2(0.55, 0.55)
 
 [node name="Crosshair" parent="." unique_id=1168615329 instance=ExtResource("4_28aoi")]
+
+[node name="UI" parent="." unique_id=495199274 instance=ExtResource("4_jnlp7")]

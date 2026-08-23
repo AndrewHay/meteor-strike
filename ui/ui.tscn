@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://dh0jbh82iffw8"]
+
+[ext_resource type="Script" uid="uid://bsqckvuxwmi2n" path="res://ui/ui.gd" id="1_nb4k0"]
+
+[sub_resource type="Theme" id="Theme_vvh5c"]
+default_font_size = 60
+
+[node name="UI" type="Control" unique_id=495199274]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nb4k0")
+
+[node name="GameLostScreen" type="Control" parent="." unique_id=1848755383]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="GameLostScreen" unique_id=496114151]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -11.5
+offset_right = 46.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_vvh5c")
+text = "SHIP DESTROYED
+ALL LIVES LOST
+THE END OF HUMANITY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GameVictoryScreen" type="Control" parent="." unique_id=1737026995]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="GameVictoryScreen" unique_id=1513750877]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -11.5
+offset_right = 46.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_vvh5c")
+text = "SUCCESS"
+horizontal_alignment = 1
+vertical_alignment = 1
