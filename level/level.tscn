@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://q7o6ygniny5a"]
+
+[ext_resource type="PackedScene" uid="uid://dmm3jw2q47u2m" path="res://meteor/meteor.tscn" id="1_qohg2"]
+[ext_resource type="PackedScene" uid="uid://cbcdxli8t5l72" path="res://house/house.tscn" id="2_vkbyq"]
+[ext_resource type="PackedScene" uid="uid://cnavm0immy15t" path="res://static_box.tscn" id="3_ktfr2"]
+
+[node name="Level" type="Node2D" unique_id=972982531]
+
+[node name="Meteor" parent="." unique_id=1745156751 instance=ExtResource("1_qohg2")]
+position = Vector2(248, -238)
+linear_velocity = Vector2(-120, -60)
+
+[node name="House" parent="." unique_id=1658777344 instance=ExtResource("2_vkbyq")]
+position = Vector2(0, 117)
+
+[node name="House2" parent="." unique_id=823515509 instance=ExtResource("2_vkbyq")]
+position = Vector2(120, 117)
+
+[node name="House3" parent="." unique_id=774974785 instance=ExtResource("2_vkbyq")]
+position = Vector2(-126, 117)
+
+[node name="StaticBody2D2" parent="." unique_id=1474745948 instance=ExtResource("3_ktfr2")]
+position = Vector2(-1.1920929e-07, 238)
+scale = Vector2(18.160004, 2.7600012)
