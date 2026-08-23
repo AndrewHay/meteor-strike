@@ -6,9 +6,7 @@
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_6e2y7"]
 polygon = PackedVector2Array(-64, -64, -64, 64, 64, 64, 64, -64)
 
-[node name="Reactor" type="RigidBody2D" unique_id=1853265617]
-contact_monitor = true
-max_contacts_reported = 1
+[node name="Reactor" type="Area2D" unique_id=2141199515]
 script = ExtResource("1_6e2y7")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=807814666]

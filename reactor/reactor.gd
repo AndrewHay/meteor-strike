@@ -1,4 +1,4 @@
-extends RigidBody2D
+extends Area2D
 
 const EXPLOSION = preload("res://explosion/explosion.tscn")
 
