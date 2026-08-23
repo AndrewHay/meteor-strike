@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://b27qhu1jpmdvj"]
+
+[ext_resource type="PackedScene" uid="uid://cnavm0immy15t" path="res://static_box.tscn" id="1_pq8q7"]
+[ext_resource type="PackedScene" uid="uid://cbcdxli8t5l72" path="res://house.tscn" id="1_pyidc"]
+[ext_resource type="PackedScene" uid="uid://dmm3jw2q47u2m" path="res://meteor.tscn" id="1_vvh5c"]
+
+[node name="Root" type="Node2D" unique_id=2002437452]
+
+[node name="Meteor" parent="." unique_id=1745156751 instance=ExtResource("1_vvh5c")]
+position = Vector2(248, -238)
+linear_velocity = Vector2(-120, -60)
+
+[node name="House" parent="." unique_id=1658777344 instance=ExtResource("1_pyidc")]
+position = Vector2(0, 117)
+
+[node name="House2" parent="." unique_id=1546645660 instance=ExtResource("1_pyidc")]
+position = Vector2(120, 117)
+
+[node name="House3" parent="." unique_id=1067753269 instance=ExtResource("1_pyidc")]
+position = Vector2(-126, 117)
+
+[node name="StaticBody2D2" parent="." unique_id=1474745948 instance=ExtResource("1_pq8q7")]
+position = Vector2(-1.1920929e-07, 238)
+scale = Vector2(18.160004, 2.7600012)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=235987464]

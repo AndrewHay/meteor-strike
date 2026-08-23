@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cnavm0immy15t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fjf38"]
+size = Vector2(64, 64)
+
+[sub_resource type="Gradient" id="Gradient_vho56"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_vho56"]
+gradient = SubResource("Gradient_vho56")
+
+[node name="StaticBody2D2" type="StaticBody2D" unique_id=1474745948]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1042817989]
+shape = SubResource("RectangleShape2D_fjf38")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1481555622]
+texture = SubResource("GradientTexture2D_vho56")
