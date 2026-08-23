@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bktcnm7ffc37w"]
+
+[ext_resource type="Script" uid="uid://drfyc5ehjq1m3" path="res://bullet/bullet.gd" id="1_8v1h3"]
+[ext_resource type="Texture2D" uid="uid://hltk7tantad8" path="res://bullet/bullet.png" id="1_pv6j8"]
+
+[node name="Bullet" type="RigidBody2D" unique_id=69182042]
+script = ExtResource("1_8v1h3")
+
+[node name="Bullet" type="Sprite2D" parent="." unique_id=525495351]
+scale = Vector2(0.34674332, 0.34674332)
+texture = ExtResource("1_pv6j8")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=694091597]
+scale = Vector2(0.34674332, 0.34674332)
+polygon = PackedVector2Array(-4, -49, -4, -47.1, -18.8, -35, -20.8, -35, -47.8, -9, -50, -9, -50, -6, -51.3, -4, -43, 9.5, -43, 11.900002, -35.7, 18, -33.9, 18, -12, 42.699997, -12, 44, -3.5999985, 50, 1.9000015, 50, 46.800003, 3, 49, 3, 49, -4.799999, 27, -27.8, 27, -28.900002, 7, -46.9, 7, -49)
