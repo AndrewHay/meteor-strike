@@ -5,6 +5,7 @@ const METEOR_SPEED := 150.0
 const BASE_SPAWN_INTERVAL := 1.0
 const DIFFICULTY_INTERVAL := 20.0
 const METEOR_RATE_MULTIPLIER := 1.2
+const WARNING_DURATION := 3.0
 
 var meteor_scene = preload("res://meteor/meteor.tscn")
 
@@ -24,10 +25,13 @@ func _ready() -> void:
 	difficulty_timer.timeout.connect(_increase_difficulty)
 	add_child(difficulty_timer)
 
+func show_banner(message: String, duration: float = 0.0) -> void:
+	$Banner.show_message(message, duration)
+
 func _increase_difficulty() -> void:
 	_difficulty_level += 1
 	_meteor_timer.wait_time = BASE_SPAWN_INTERVAL / pow(METEOR_RATE_MULTIPLIER, _difficulty_level)
-	get_node("Score").show_warning("WARNING! Meteors increasing!")
+	show_banner("WARNING! Meteors increasing!", WARNING_DURATION)
 
 func _spawn_meteor() -> void:
 	var bases = get_tree().get_nodes_in_group("base")

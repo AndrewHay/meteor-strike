@@ -2,9 +2,10 @@ extends Node2D
 class_name Game
 
 static var instance : Game
-@export var ui : UI
 
 var playing = true
+
+const GAME_OVER_MESSAGE := "SHIP DESTROYED\nALL LIVES LOST\nTHE END OF HUMANITY"
 
 func _enter_tree() -> void:
 	instance = self
@@ -12,11 +13,13 @@ func _enter_tree() -> void:
 func _exit_tree() -> void:
 	instance = null
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 
-func game_over():
+func game_over() -> void:
 	playing = false
-	print("Game over")
-	ui.game_over()
+	$Level.show_banner(GAME_OVER_MESSAGE)
+
+func game_victory() -> void:
+	playing = false
+	$Level.show_banner("SUCCESS")
