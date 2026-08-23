@@ -2,9 +2,16 @@
 
 [ext_resource type="Script" uid="uid://drfyc5ehjq1m3" path="res://bullet/bullet.gd" id="1_8v1h3"]
 [ext_resource type="Texture2D" uid="uid://hltk7tantad8" path="res://bullet/bullet.png" id="1_pv6j8"]
+[ext_resource type="Texture2D" uid="uid://cjjji2wjf4fjv" path="res://light.png" id="2_0qjqd"]
 
 [node name="Bullet" type="RigidBody2D" unique_id=69182042]
 script = ExtResource("1_8v1h3")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=95092078]
+color = Color(1.732707e-06, 0.95337373, 0.9445568, 1)
+shadow_enabled = true
+texture = ExtResource("2_0qjqd")
+texture_scale = 8.0
 
 [node name="Bullet" type="Sprite2D" parent="." unique_id=525495351]
 scale = Vector2(0.34674332, 0.34674332)

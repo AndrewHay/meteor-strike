@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://drdce4yej2wm7" path="res://meteor/meteor_tiny.gd" id="1_q8qqa"]
 [ext_resource type="Texture2D" uid="uid://d3berghc0a7vn" path="res://meteor/meteor_tiny.png" id="2_f3mpx"]
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_q8qqa"]
+polygon = PackedVector2Array(-6, -26, -23, -21, -24, -21, -24, -13, -24, -7, -27, -3, -28, -3, -28, 4, -14, 25, -14, 26, -8, 26, 1, 26, 7, 21, 8, 21, 8, 16, 8, 12, 17, 10, 24, 10, 27, 6, 28, 6, 28, -3, 24, -7, 23, -7, 17, -23, 17, -24, -6, -27)
+
 [node name="MeteorTiny4" type="RigidBody2D" unique_id=1158800049]
 gravity_scale = 0.0
 contact_monitor = true
@@ -18,3 +21,7 @@ region_rect = Rect2(64, 64, 64, 64)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=2119614323]
 scale = Vector2(0.462923, 0.462923)
 polygon = PackedVector2Array(-6, -26, -23, -21, -24, -21, -24, -13, -24, -7, -27, -3, -28, -3, -28, 4, -14, 25, -14, 26, -8, 26, 1, 26, 7, 21, 8, 21, 8, 16, 8, 12, 17, 10, 24, 10, 27, 6, 28, 6, 28, -3, 24, -7, 23, -7, 17, -23, 17, -24, -6, -27)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=725054331]
+scale = Vector2(0.462923, 0.462923)
+occluder = SubResource("OccluderPolygon2D_q8qqa")
