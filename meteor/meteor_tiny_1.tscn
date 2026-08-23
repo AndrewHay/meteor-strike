@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://c7u76xlb0ddox"]
+
+[ext_resource type="Script" uid="uid://drdce4yej2wm7" path="res://meteor/meteor_tiny.gd" id="1_ewlh8"]
+[ext_resource type="Texture2D" uid="uid://d3berghc0a7vn" path="res://meteor/meteor_tiny.png" id="2_amxkv"]
+
+[node name="MeteorTiny1" type="RigidBody2D" unique_id=1014263876]
+gravity_scale = 0.0
+contact_monitor = true
+max_contacts_reported = 10
+script = ExtResource("1_ewlh8")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2049572845]
+scale = Vector2(0.462923, 0.462923)
+texture = ExtResource("2_amxkv")
+region_enabled = true
+region_rect = Rect2(0, 0, 64, 64)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1821648707]
+scale = Vector2(0.462923, 0.462923)
+polygon = PackedVector2Array(13, -31, -10, -31, -10, -28.8, -16, -22.8, -16, -21, -22, -21, -26, -16, -28, -16, -28, 10, -13, 21.900002, -13, 23.599998, 4, 27.5, 4, 29.400002, 21.400002, 26, 24.099998, 26, 30.099998, 17, 32, 17, 32, 14.799999, 26.599998, -8, 26, -8, 26, -21.1, 13, -29.1)

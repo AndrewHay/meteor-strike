@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://7hkpywl4y1b1"]
+
+[ext_resource type="PackedScene" uid="uid://c7u76xlb0ddox" path="res://meteor/meteor_tiny_1.tscn" id="1_gy4p7"]
+[ext_resource type="PackedScene" uid="uid://dn61w34s0iovt" path="res://meteor/meteor_tiny_2.tscn" id="2_avyt5"]
+[ext_resource type="PackedScene" uid="uid://d4ixd1ty3crf8" path="res://meteor/meteor_tiny_3.tscn" id="3_avyt5"]
+[ext_resource type="PackedScene" uid="uid://bpjwhyywhi645" path="res://meteor/meteor_tiny_4.tscn" id="4_gy4p7"]
+
+[node name="MeteorTiny" type="Node2D" unique_id=601140176]
+
+[node name="MeteorTiny1" parent="." unique_id=1014263876 instance=ExtResource("1_gy4p7")]
+position = Vector2(-12, -12)
+
+[node name="MeteorTiny2" parent="." unique_id=904769406 instance=ExtResource("2_avyt5")]
+position = Vector2(11, 11)
+
+[node name="MeteorTiny3" parent="." unique_id=293361516 instance=ExtResource("3_avyt5")]
+position = Vector2(-17, 11)
+
+[node name="MeteorTiny4" parent="." unique_id=1158800049 instance=ExtResource("4_gy4p7")]
+position = Vector2(17, -19)
