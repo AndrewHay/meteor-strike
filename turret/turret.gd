@@ -1,11 +1,9 @@
-extends StaticBody2D
+extends RigidBody2D
 
 const BULLET = preload("res://bullet/bullet.tscn")
+const EXPLOSION = preload("res://explosion/explosion.tscn")
 
-const BARREL_VISUAL_OFFSET := PI
-const MUZZLE_OFFSET := 40.0
-const BULLET_SPEED := 1200.0
-
+@export var spawn_point : Node2D
 @export var barrel : Sprite2D
 
 func _get_fire_direction() -> Vector2:
@@ -16,10 +14,16 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.is_pressed():
 		var direction := _get_fire_direction()
 		var b = BULLET.instantiate()
+		b.global_position = spawn_point.global_position
+		b.global_rotation = spawn_point.global_rotation
 		get_parent().add_child(b)
-		b.global_position = barrel.global_position + direction * MUZZLE_OFFSET
-		b.global_rotation = direction.angle()
-		b.linear_velocity = direction * BULLET_SPEED
 	elif event is InputEventMouseMotion:
 		var mouse_local := to_local(get_global_mouse_position()) - barrel.position
 		barrel.rotation = mouse_local.angle() + BARREL_VISUAL_OFFSET
+
+func _on_body_entered(body: Node) -> void:
+	if body is RigidBody2D and body.is_in_group("meteor"):
+		var boom = EXPLOSION.instantiate()
+		boom.position = position
+		get_parent().add_child(boom)
+		queue_free()
