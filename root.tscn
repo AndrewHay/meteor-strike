@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://b27qhu1jpmdvj"]
 
 [ext_resource type="PackedScene" uid="uid://cnavm0immy15t" path="res://static_box.tscn" id="1_pq8q7"]
-[ext_resource type="PackedScene" uid="uid://cbcdxli8t5l72" path="res://house.tscn" id="1_pyidc"]
+
 [ext_resource type="PackedScene" uid="uid://dmm3jw2q47u2m" path="res://meteor/meteor.tscn" id="1_vvh5c"]
+[ext_resource type="PackedScene" uid="uid://cbcdxli8t5l72" path="res://house/house.tscn" id="1_pyidc"]
 
 [node name="Root" type="Node2D" unique_id=2002437452]
 
