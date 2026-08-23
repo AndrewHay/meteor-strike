@@ -1,14 +1,23 @@
-[gd_scene format=3 uid="uid://c8n4ship2k7m1p"]
+[gd_scene format=3 uid="uid://6i541tivxvct"]
 
 [ext_resource type="Script" uid="uid://mjvrdcyodfbo" path="res://ship/ship.gd" id="1_ship"]
 [ext_resource type="PackedScene" uid="uid://v2r2xuyshift" path="res://reactor/reactor.tscn" id="2_reactor"]
 [ext_resource type="PackedScene" uid="uid://3ic1cyif1etj" path="res://turret/turret.tscn" id="3_turret"]
 
-[node name="Ship" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hitbox"]
+size = Vector2(928, 782)
+
+[node name="Ship" type="Node2D" unique_id=1137574660]
 script = ExtResource("1_ship")
 
-[node name="Reactor" parent="." instance=ExtResource("2_reactor")]
+[node name="Reactor" parent="." unique_id=1416586370 instance=ExtResource("2_reactor")]
 
-[node name="Turret" parent="." instance=ExtResource("3_turret")]
+[node name="Turret" parent="." unique_id=1694747949 instance=ExtResource("3_turret")]
 position = Vector2(125, 0)
 rotation = 1.5707964
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=68529827]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1835613827]
+position = Vector2(337, 127)
+shape = SubResource("RectangleShape2D_hitbox")
