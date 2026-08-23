@@ -1,11 +1,15 @@
 [gd_scene format=3 uid="uid://br2u7leva3x4c"]
 
+[ext_resource type="Script" uid="uid://b4rtpaxhtpm0h" path="res://hull_part/hull_part.gd" id="1_t2e7c"]
 [ext_resource type="Texture2D" uid="uid://cs5oguccxnpm7" path="res://hull_part/box.png" id="1_yr08a"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_6e2y7"]
 polygon = PackedVector2Array(-64, -64, -64, 64, 64, 64, 64, -64)
 
-[node name="HullPart" type="Area2D" unique_id=2141199515]
+[node name="HullPart" type="RigidBody2D" unique_id=1254337920]
+contact_monitor = true
+max_contacts_reported = 1
+script = ExtResource("1_t2e7c")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=807814666]
 texture = ExtResource("1_yr08a")
