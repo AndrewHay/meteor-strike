@@ -4,10 +4,22 @@
 [ext_resource type="Script" uid="uid://cl3tyggod43rd" path="res://turret/turret.gd" id="2_1p48p"]
 [ext_resource type="Texture2D" uid="uid://bqw7sox4lbttb" path="res://turret/turret_barrel.png" id="2_2876l"]
 
-[node name="Turret" type="Sprite2D" unique_id=412231546 node_paths=PackedStringArray("barrel")]
-texture = ExtResource("1_vfthy")
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_turret"]
+bounce = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_turret"]
+size = Vector2(128, 128)
+
+[node name="Turret" type="StaticBody2D" unique_id=412231546 node_paths=PackedStringArray("barrel")]
+physics_material_override = SubResource("PhysicsMaterial_turret")
 script = ExtResource("2_1p48p")
 barrel = NodePath("Barrel")
 
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=412231547]
+texture = ExtResource("1_vfthy")
+
 [node name="Barrel" type="Sprite2D" parent="." unique_id=9886340]
 texture = ExtResource("2_2876l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=9886341]
+shape = SubResource("RectangleShape2D_turret")

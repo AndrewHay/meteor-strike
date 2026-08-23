@@ -8,7 +8,6 @@
 script = ExtResource("1_ship")
 
 [node name="Reactor" parent="." instance=ExtResource("2_reactor")]
-gravity_scale = 0.0
 
 [node name="Turret" parent="." instance=ExtResource("3_turret")]
 position = Vector2(125, 0)

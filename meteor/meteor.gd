@@ -18,5 +18,3 @@ func _on_body_entered(body: Node) -> void:
 				c.angular_velocity = angular_velocity
 				get_parent().add_child(t)
 			queue_free()
-		if body.is_in_group("base"):
-			body.queue_free()
