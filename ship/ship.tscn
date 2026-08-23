@@ -20,11 +20,30 @@ script = ExtResource("1_ship")
 [node name="Reactor" parent="." unique_id=1510725946 instance=ExtResource("2_reactor")]
 
 [node name="Turret" parent="." unique_id=1253497942 instance=ExtResource("3_turret")]
-position = Vector2(256, 0)
+position = Vector2(192, -128)
+rotation = 1.5707964
+
+[node name="Turret2" parent="." unique_id=1098148073 instance=ExtResource("3_turret")]
+position = Vector2(192, 128)
 rotation = 1.5707964
 
 [node name="HullPart" parent="." unique_id=2141199515 instance=ExtResource("4_r4tgf")]
 position = Vector2(128, 0)
 
+[node name="HullPart7" parent="." unique_id=1254337920 instance=ExtResource("4_r4tgf")]
+position = Vector2(-256, 0)
+
 [node name="HullPart2" parent="." unique_id=792369285 instance=ExtResource("4_r4tgf")]
 position = Vector2(-128, 0)
+
+[node name="HullPart3" parent="." unique_id=1180626224 instance=ExtResource("4_r4tgf")]
+position = Vector2(64, -128)
+
+[node name="HullPart4" parent="." unique_id=571712508 instance=ExtResource("4_r4tgf")]
+position = Vector2(-64, -128)
+
+[node name="HullPart5" parent="." unique_id=1005608284 instance=ExtResource("4_r4tgf")]
+position = Vector2(64, 128)
+
+[node name="HullPart6" parent="." unique_id=834160658 instance=ExtResource("4_r4tgf")]
+position = Vector2(-64, 128)
