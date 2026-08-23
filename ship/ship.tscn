@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://3ic1cyif1etj" path="res://turret/turret.tscn" id="3_turret"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hitbox"]
-size = Vector2(928, 782)
+size = Vector2(517, 330)
 
 [node name="Ship" type="Node2D" unique_id=1137574660]
 script = ExtResource("1_ship")
@@ -19,5 +19,5 @@ rotation = 1.5707964
 [node name="Hitbox" type="Area2D" parent="." unique_id=68529827]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1835613827]
-position = Vector2(337, 127)
+position = Vector2(-59.5, 3)
 shape = SubResource("RectangleShape2D_hitbox")

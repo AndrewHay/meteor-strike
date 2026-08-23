@@ -6,5 +6,5 @@ func _ready() -> void:
 
 func _on_hitbox_body_entered(body: Node) -> void:
 	if body.is_in_group("resource"):
-		print("gathered resource")
+		get_parent().get_node("Score").add_resource()
 		body.queue_free()
