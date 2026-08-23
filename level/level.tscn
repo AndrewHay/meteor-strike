@@ -1,10 +1,19 @@
 [gd_scene format=3 uid="uid://q7o6ygniny5a"]
 
 [ext_resource type="PackedScene" uid="uid://dmm3jw2q47u2m" path="res://meteor/meteor.tscn" id="1_qohg2"]
+[ext_resource type="Texture2D" uid="uid://cyh6vowjriiba" path="res://assets/bg_1_1.png" id="1_vkbyq"]
 [ext_resource type="PackedScene" uid="uid://cbcdxli8t5l72" path="res://house/house.tscn" id="2_vkbyq"]
 [ext_resource type="PackedScene" uid="uid://cnavm0immy15t" path="res://static_box.tscn" id="3_ktfr2"]
 
 [node name="Level" type="Node2D" unique_id=972982531]
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=189541379]
+scroll_scale = Vector2(0.1, 0.1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=65056790]
+position = Vector2(-2.4999695, -8)
+scale = Vector2(1.4662502, 1.1033332)
+texture = ExtResource("1_vkbyq")
 
 [node name="Meteor" parent="." unique_id=1745156751 instance=ExtResource("1_qohg2")]
 position = Vector2(248, -238)
