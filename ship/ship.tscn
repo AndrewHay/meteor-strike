@@ -8,42 +8,42 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hitbox"]
 size = Vector2(517, 330)
 
-[node name="Hitbox" type="Area2D" parent="." unique_id=68529827]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1835613827]
-position = Vector2(-59.5, 3)
-shape = SubResource("RectangleShape2D_hitbox")
-
-[node name="Ship" type="Node2D" unique_id=229495916]
+[node name="Ship" type="Node2D"]
 script = ExtResource("1_ship")
 
-[node name="Reactor" parent="." unique_id=1510725946 instance=ExtResource("2_reactor")]
+[node name="Reactor" parent="." instance=ExtResource("2_reactor")]
 
-[node name="Turret" parent="." unique_id=1253497942 instance=ExtResource("3_turret")]
+[node name="Turret" parent="." instance=ExtResource("3_turret")]
 position = Vector2(192, -128)
 rotation = 1.5707964
 
-[node name="Turret2" parent="." unique_id=1098148073 instance=ExtResource("3_turret")]
+[node name="Turret2" parent="." instance=ExtResource("3_turret")]
 position = Vector2(192, 128)
 rotation = 1.5707964
 
-[node name="HullPart" parent="." unique_id=2141199515 instance=ExtResource("4_r4tgf")]
+[node name="HullPart" parent="." instance=ExtResource("4_r4tgf")]
 position = Vector2(128, 0)
 
-[node name="HullPart7" parent="." unique_id=1254337920 instance=ExtResource("4_r4tgf")]
-position = Vector2(-256, 0)
-
-[node name="HullPart2" parent="." unique_id=792369285 instance=ExtResource("4_r4tgf")]
+[node name="HullPart2" parent="." instance=ExtResource("4_r4tgf")]
 position = Vector2(-128, 0)
 
-[node name="HullPart3" parent="." unique_id=1180626224 instance=ExtResource("4_r4tgf")]
+[node name="HullPart3" parent="." instance=ExtResource("4_r4tgf")]
 position = Vector2(64, -128)
 
-[node name="HullPart4" parent="." unique_id=571712508 instance=ExtResource("4_r4tgf")]
+[node name="HullPart4" parent="." instance=ExtResource("4_r4tgf")]
 position = Vector2(-64, -128)
 
-[node name="HullPart5" parent="." unique_id=1005608284 instance=ExtResource("4_r4tgf")]
+[node name="HullPart5" parent="." instance=ExtResource("4_r4tgf")]
 position = Vector2(64, 128)
 
-[node name="HullPart6" parent="." unique_id=834160658 instance=ExtResource("4_r4tgf")]
+[node name="HullPart6" parent="." instance=ExtResource("4_r4tgf")]
 position = Vector2(-64, 128)
+
+[node name="HullPart7" parent="." instance=ExtResource("4_r4tgf")]
+position = Vector2(-256, 0)
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(-59.5, 3)
+shape = SubResource("RectangleShape2D_hitbox")
