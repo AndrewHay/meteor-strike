@@ -2,6 +2,7 @@ extends RigidBody2D
 
 const BULLET = preload("res://bullet/bullet.tscn")
 const EXPLOSION = preload("res://explosion/explosion.tscn")
+const BARREL_VISUAL_OFFSET := PI
 
 @export var spawn_point : Node2D
 @export var barrel : Sprite2D
@@ -12,11 +13,11 @@ func _get_fire_direction() -> Vector2:
 func _input(event: InputEvent) -> void:
 	if not Game.instance.playing: return
 	if event is InputEventMouseButton and event.is_pressed():
-		var direction := _get_fire_direction()
 		var b = BULLET.instantiate()
+		get_parent().add_child(b)
+		b.linear_velocity = _get_fire_direction() * 500.0
 		b.global_position = spawn_point.global_position
 		b.global_rotation = spawn_point.global_rotation
-		get_parent().add_child(b)
 	elif event is InputEventMouseMotion:
 		var mouse_local := to_local(get_global_mouse_position()) - barrel.position
 		barrel.rotation = mouse_local.angle() + BARREL_VISUAL_OFFSET
