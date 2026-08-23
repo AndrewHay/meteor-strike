@@ -1,0 +1,10 @@
+78098b89c88a74ebe8c20117b8754620
+::res://::1787476628
+house.tscn::PackedScene::4847382782411705287::1787476119::0::1::::<><><>0<>0<><>::
+icon.svg::CompressedTexture2D::9123880015730317322::1787476119::1787476207::1::::<><><>0<>0<>0820506e34cb97f26d256552fa7c167d<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+README.md::TextFile::-1::1787476110::0::1::::<><><>0<>0<><>::
+root.tscn::PackedScene::4348564613552843343::1787476639::0::1::::<><><>0<>0<><>::uid://cnavm0immy15t::::res://static_box.tscn<>uid://cbcdxli8t5l72::::res://house.tscn<>uid://dmm3jw2q47u2m::::res://meteor.tscn
+static_box.tscn::PackedScene::5686594147060002039::1787476119::0::1::::<><><>0<>0<><>::
+::res://meteor/::1787476632
+meteor.png::CompressedTexture2D::7199662014177236667::1787476632::1787476633::1::::<><><>0<>0<>88e3f35bae1bb7614194b7fe204e9767<>res://.godot/imported/meteor.png-be2cec159c5819dc44018ad41b49afe4.ctex::
+meteor.tscn::PackedScene::8028018053717438850::1787476634::0::1::::<><><>0<>0<><>::
