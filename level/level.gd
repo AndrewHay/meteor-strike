@@ -11,6 +11,7 @@ var meteor_scene = preload("res://meteor/meteor.tscn")
 
 var _difficulty_level := 0
 var _meteor_timer: Timer
+var _difficulty_timer: Timer
 
 func _ready() -> void:
 	_meteor_timer = Timer.new()
@@ -19,11 +20,24 @@ func _ready() -> void:
 	_meteor_timer.timeout.connect(_spawn_meteor)
 	add_child(_meteor_timer)
 
-	var difficulty_timer := Timer.new()
-	difficulty_timer.wait_time = DIFFICULTY_INTERVAL
-	difficulty_timer.autostart = true
-	difficulty_timer.timeout.connect(_increase_difficulty)
-	add_child(difficulty_timer)
+	_difficulty_timer = Timer.new()
+	_difficulty_timer.wait_time = DIFFICULTY_INTERVAL
+	_difficulty_timer.autostart = true
+	_difficulty_timer.timeout.connect(_increase_difficulty)
+	add_child(_difficulty_timer)
+
+func stop() -> void:
+	_meteor_timer.stop()
+	_difficulty_timer.stop()
+	for node in get_tree().get_nodes_in_group("meteor"):
+		if node is RigidBody2D:
+			node.freeze = true
+	for node in get_tree().get_nodes_in_group("bullet"):
+		if node is RigidBody2D:
+			node.freeze = true
+
+func hide_banner() -> void:
+	$Banner.hide_banner()
 
 func show_banner(message: String, duration: float = 0.0) -> void:
 	$Banner.show_message(message, duration)

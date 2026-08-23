@@ -1,15 +1,16 @@
 [gd_scene format=3 uid="uid://b27qhu1jpmdvj"]
 
-[ext_resource type="PackedScene" uid="uid://q7o6ygniny5a" path="res://level/level.tscn" id="1_pyidc"]
 [ext_resource type="Script" uid="uid://dk10km1ofrgey" path="res://root.gd" id="1_vvh5c"]
 [ext_resource type="PackedScene" uid="uid://brckowiu61j6c" path="res://crosshair/crosshair.tscn" id="4_28aoi"]
+[ext_resource type="PackedScene" uid="uid://d8menu3k9m4p1" path="res://menu/menu.tscn" id="5_menu"]
 
 [node name="Root" type="Node2D" unique_id=2002437452]
 script = ExtResource("1_vvh5c")
-
-[node name="Level" parent="." unique_id=972982531 instance=ExtResource("1_pyidc")]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=235987464]
 zoom = Vector2(0.55, 0.55)
 
 [node name="Crosshair" parent="." unique_id=1168615329 instance=ExtResource("4_28aoi")]
+visible = false
+
+[node name="Menu" parent="." instance=ExtResource("5_menu")]
