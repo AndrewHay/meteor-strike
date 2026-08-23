@@ -12,4 +12,5 @@ func _input(event: InputEvent) -> void:
 		b.rotation = barrel.rotation
 		get_parent().add_child(b)
 	elif event is InputEventMouseMotion:
-		barrel.rotation = atan2(position.y - event.position.y, position.x - event.position.x)
+		var direction = global_position - get_global_mouse_position()
+		barrel.global_rotation = direction.angle()
