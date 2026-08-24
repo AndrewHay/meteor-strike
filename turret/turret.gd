@@ -1,4 +1,4 @@
-extends RigidBody2D
+extends Area2D
 
 const BULLET = preload("res://bullet/bullet.tscn")
 const EXPLOSION = preload("res://explosion/explosion.tscn")

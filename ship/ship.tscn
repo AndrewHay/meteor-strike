@@ -6,44 +6,44 @@
 [ext_resource type="PackedScene" uid="uid://br2u7leva3x4c" path="res://hull_part/hull_part.tscn" id="4_r4tgf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hitbox"]
-size = Vector2(517, 330)
+size = Vector2(575, 429)
 
-[node name="Ship" type="Node2D"]
+[node name="Ship" type="Node2D" unique_id=426875825]
 script = ExtResource("1_ship")
 
-[node name="Reactor" parent="." instance=ExtResource("2_reactor")]
+[node name="Reactor" parent="." unique_id=973577820 instance=ExtResource("2_reactor")]
 
-[node name="Turret" parent="." instance=ExtResource("3_turret")]
+[node name="Turret" parent="." unique_id=295999491 instance=ExtResource("3_turret")]
 position = Vector2(192, -128)
 rotation = 1.5707964
 
-[node name="Turret2" parent="." instance=ExtResource("3_turret")]
+[node name="Turret2" parent="." unique_id=2051297148 instance=ExtResource("3_turret")]
 position = Vector2(192, 128)
 rotation = 1.5707964
 
-[node name="HullPart" parent="." instance=ExtResource("4_r4tgf")]
+[node name="HullPart" parent="." unique_id=765016950 instance=ExtResource("4_r4tgf")]
 position = Vector2(128, 0)
 
-[node name="HullPart2" parent="." instance=ExtResource("4_r4tgf")]
+[node name="HullPart2" parent="." unique_id=449530373 instance=ExtResource("4_r4tgf")]
 position = Vector2(-128, 0)
 
-[node name="HullPart3" parent="." instance=ExtResource("4_r4tgf")]
+[node name="HullPart3" parent="." unique_id=368612103 instance=ExtResource("4_r4tgf")]
 position = Vector2(64, -128)
 
-[node name="HullPart4" parent="." instance=ExtResource("4_r4tgf")]
+[node name="HullPart4" parent="." unique_id=890537915 instance=ExtResource("4_r4tgf")]
 position = Vector2(-64, -128)
 
-[node name="HullPart5" parent="." instance=ExtResource("4_r4tgf")]
+[node name="HullPart5" parent="." unique_id=922635127 instance=ExtResource("4_r4tgf")]
 position = Vector2(64, 128)
 
-[node name="HullPart6" parent="." instance=ExtResource("4_r4tgf")]
+[node name="HullPart6" parent="." unique_id=784186928 instance=ExtResource("4_r4tgf")]
 position = Vector2(-64, 128)
 
-[node name="HullPart7" parent="." instance=ExtResource("4_r4tgf")]
+[node name="HullPart7" parent="." unique_id=72444381 instance=ExtResource("4_r4tgf")]
 position = Vector2(-256, 0)
 
-[node name="Hitbox" type="Area2D" parent="."]
+[node name="Hitbox" type="Area2D" parent="." unique_id=1987193016]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
-position = Vector2(-59.5, 3)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1439080272]
+position = Vector2(-30.5, -5.5)
 shape = SubResource("RectangleShape2D_hitbox")
