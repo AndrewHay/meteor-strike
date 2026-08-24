@@ -1,5 +1,8 @@
 extends Node2D
 
+@export var victory_target: int = 100
+
+const VICTORY_MESSAGE := "Victory! the colony will survive with these resources!"
 const SPAWN_BEYOND_MARGIN := 8.0
 const METEOR_SPEED := 150.0
 const BASE_SPAWN_INTERVAL := 1.0
@@ -41,6 +44,10 @@ func hide_banner() -> void:
 
 func show_banner(message: String, duration: float = 0.0) -> void:
 	$Banner.show_message(message, duration)
+
+func check_victory(resource_count: int) -> void:
+	if resource_count >= victory_target:
+		Game.instance.victory(VICTORY_MESSAGE)
 
 func _increase_difficulty() -> void:
 	_difficulty_level += 1

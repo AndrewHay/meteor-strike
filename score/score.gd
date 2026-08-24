@@ -12,6 +12,9 @@ func _ready() -> void:
 func add_resource(amount: int = 1) -> void:
 	resources += amount
 	_update_label()
+	var level = get_parent()
+	if level.has_method("check_victory"):
+		level.check_victory(resources)
 
 func _update_label() -> void:
 	label.text = "Resources: %d" % resources
